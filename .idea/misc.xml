@@ -14,6 +14,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/JmsIntroMdbEar/pom.xml" />
+        <option value="$PROJECT_DIR$/JmsIntroMdbWeb/pom.xml" />
       </set>
     </option>
   </component>

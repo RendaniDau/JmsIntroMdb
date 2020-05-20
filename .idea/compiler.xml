@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JmsIntroMdbEjb" />
-        <module name="JmsIntroMdbWeb" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JmsIntroMdbWeb" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
