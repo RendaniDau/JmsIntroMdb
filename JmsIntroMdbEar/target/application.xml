@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd" version="5">
+  <description>An intro to JMS using MDBs</description>
+  <display-name>JmsIntroMdb</display-name>
+  <module>
+    <web>
+      <web-uri>JmsIntroMdbWeb-1.0-SNAPSHOT.war</web-uri>
+      <context-root>/JmsIntroMdbWeb</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>JmsIntroMdbEjb-1.0-SNAPSHOT.jar</ejb>
+  </module>
+  <library-directory>APP-INF/lib</library-directory>
+</application>
