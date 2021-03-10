@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<weblogic-jms xmlns="http://xmlns.oracle.com/weblogic/weblogic-jms" xmlns:sec="http://xmlns.oracle.com/weblogic/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wls="http://xmlns.oracle.com/weblogic/security/wls" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-jms http://xmlns.oracle.com/weblogic/weblogic-jms/1.1/weblogic-jms.xsd">
+  <foreign-server name="ActiveMqServer-0">
+    <default-targeting-enabled>true</default-targeting-enabled>
+    <foreign-destination name="ForeignDestination-0">
+      <local-jndi-name>Q.za.co.entelect.dojo.jms</local-jndi-name>
+      <remote-jndi-name>Q.za.co.entelect.dojo.jms</remote-jndi-name>
+    </foreign-destination>
+    <foreign-connection-factory name="ForeignConnectionFactory-0">
+      <local-jndi-name>activemq.QueueXAConnectionFactory</local-jndi-name>
+      <remote-jndi-name>QueueXAConnectionFactory</remote-jndi-name>
+      <username>admin</username>
+      <connection-health-checking>enabled</connection-health-checking>
+    </foreign-connection-factory>
+    <initial-context-factory>org.apache.activemq.jndi.ActiveMQInitialContextFactory</initial-context-factory>
+    <connection-url>tcp://localhost:61616</connection-url>
+    <jndi-property>
+      <key>java.naming.provider.url</key>
+      <value>tcp://hostname:61616</value>
+    </jndi-property>
+    <jndi-property>
+      <key>connectionFactoryNames</key>
+      <value>QueueXAConnectionFactory</value>
+    </jndi-property>
+    <jndi-property>
+      <key>java.naming.security.principal</key>
+      <value>admin</value>
+    </jndi-property>
+    <jndi-property>
+      <key>queue.Q.za.co.entelect.dojo.jms</key>
+      <value>Q.za.co.entelect.dojo.jms</value>
+    </jndi-property>
+    <jndi-property>
+      <key>xa</key>
+      <value>true</value>
+    </jndi-property>
+  </foreign-server>
+</weblogic-jms>
